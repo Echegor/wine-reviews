@@ -9,6 +9,8 @@ import {HomeComponent} from './home/home.component';
 import {WineCardComponent} from './wine-card/wine-card.component';
 import {AppRoutingModule} from './app-routing.module';
 import {AppMaterialModule} from './app-material.module';
+import {HttpClientModule} from '@angular/common/http';
+import {WineService} from './wine/wine.service';
 
 
 @NgModule({
@@ -24,9 +26,10 @@ import {AppMaterialModule} from './app-material.module';
     AppRoutingModule,
     CdkTableModule,
     CdkTreeModule,
-    AppMaterialModule
+    AppMaterialModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [WineService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
