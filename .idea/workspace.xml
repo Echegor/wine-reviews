@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe9e93d8-5c19-4df8-8a82-09202f752835" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/data/image.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/wine/wine.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/wine/wine.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/wine/wine.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/data/wine.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -127,23 +122,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="204" />
-          <entry key="html" value="436" />
+          <entry key="css" value="205" />
+          <entry key="html" value="442" />
           <entry key="java" value="10" />
           <entry key="json" value="3" />
           <entry key="scss" value="82" />
           <entry key="svg" value="27" />
           <entry key="ts" value="2879" />
-          <entry key="txt" value="90" />
+          <entry key="txt" value="116" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="204" />
-          <entry key="HTML" value="436" />
+          <entry key="CSS" value="205" />
+          <entry key="HTML" value="442" />
           <entry key="JAVA" value="10" />
           <entry key="JSON" value="3" />
-          <entry key="PLAIN_TEXT" value="90" />
+          <entry key="PLAIN_TEXT" value="116" />
           <entry key="SCSS" value="82" />
           <entry key="SVG" value="27" />
           <entry key="TypeScript" value="2879" />
@@ -216,7 +211,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/app/wine-card/wine-card.component.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
@@ -225,11 +220,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/src/app/wine-card/wine-card.component.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="136">
+              <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -351,8 +346,8 @@
         <option value="$PROJECT_DIR$/frontend/src/app/webSearch/contextual.service.ts" />
         <option value="$PROJECT_DIR$/frontend/src/app/data/image.ts" />
         <option value="$PROJECT_DIR$/frontend/src/app/wine-card/wine-card.component.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/wine-card/wine-card.component.css" />
         <option value="$PROJECT_DIR$/frontend/src/app/wine-card/wine-card.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/app/wine-card/wine-card.component.css" />
       </list>
     </option>
   </component>
@@ -625,7 +620,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534272264858" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534272434201" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../SI" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -727,7 +722,7 @@
       <workItem from="1533844524934" duration="3858000" />
       <workItem from="1533907844000" duration="16707000" />
       <workItem from="1534167259806" duration="14939000" />
-      <workItem from="1534253237441" duration="9050000" />
+      <workItem from="1534253237441" duration="9288000" />
     </task>
     <task id="LOCAL-00001" summary="added scss and themes">
       <created>1534185270685</created>
@@ -750,7 +745,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534197165630</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added image search service">
+      <created>1534272304950</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1534272304950</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -759,11 +761,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50396000" />
+    <option name="totallyTimeSpent" value="50634000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28837952" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -855,7 +856,8 @@
     <MESSAGE value="added scss and themes" />
     <MESSAGE value="Moved imports to their own modules" />
     <MESSAGE value="added card and wine service" />
-    <option name="LAST_COMMIT_MESSAGE" value="added card and wine service" />
+    <MESSAGE value="Added image search service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added image search service" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -1134,17 +1136,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/wine-card/wine-card.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/wine-card/wine-card.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/wine-card/wine-card.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
         </state>
       </provider>
     </entry>

@@ -1,0 +1,22 @@
+<mat-card class="wine-card">
+  <mat-card-header>
+    <div mat-card-avatar class="wine-card-header-image">
+      <img mat-card-image src="{{wineImage?.value[0]?.url}}" alt="Avatar of wine">
+    </div>
+    <mat-card-title>{{wine?.name}}</mat-card-title>
+    <mat-card-subtitle>{{wine?.title}}</mat-card-subtitle>
+    <!--<mat-card-subtitle>{{wine.variety}}</mat-card-subtitle>-->
+    <!--<mat-card-subtitle>{{wine.country}}</mat-card-subtitle>-->
+    <!--<mat-card-subtitle>{{wine.designation}}</mat-card-subtitle>-->
+  </mat-card-header>
+  <img mat-card-image src="{{wineImage?.value[0]?.url}}" alt="Photo of wine">
+  <mat-card-content>
+    <p>
+      {{wine?.description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>
