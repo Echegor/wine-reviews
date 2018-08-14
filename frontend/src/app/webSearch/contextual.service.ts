@@ -16,7 +16,6 @@ const httpOptions = {
 })
 export class ContextualService {
   private api_url =  'https://contextualwebsearch-websearch-v1.p.mashape.com/api/Search/ImageSearchAPI';
-  //unirest.get("?count=1&q=Sweet+Cheeks+2012+Vintner's+Reserve+Wild+Child+Block+Pinot+Noir+(Willamette+Valley)&autoCorrect=false")
 
   constructor(private http: HttpClient) { }
 

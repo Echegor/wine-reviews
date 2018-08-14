@@ -9,7 +9,16 @@
     <!--<mat-card-subtitle>{{wine.country}}</mat-card-subtitle>-->
     <!--<mat-card-subtitle>{{wine.designation}}</mat-card-subtitle>-->
   </mat-card-header>
-  <img mat-card-image src="{{wineImage?.value[0]?.url}}" alt="Photo of wine">
+
+  <!--TODO: Add a placeholder image while image loads-->
+    <img  mat-card-image src="{{wineImage?.value[0]?.url}}" alt="Photo of wine">
+<!--<img ng-src="{{item.url}}" altSrc="{{item.alt_url}}" onerror="this.src = $(this).attr('altSrc')">-->
+  <mat-paginator [length]="length"
+                 [pageSize]="pageSize"
+                 [pageIndex]="pageIndex"
+                 [pageSizeOptions]="pageSizeOptions"
+                 (page)="handlePage($event)">
+  </mat-paginator>
   <mat-card-content>
     <p>
       {{wine?.description}}

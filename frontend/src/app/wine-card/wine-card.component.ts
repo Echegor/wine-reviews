@@ -4,6 +4,7 @@ import {WineService} from '../wine/wine.service';
 import {ContextualService} from '../webSearch/contextual.service';
 import {map} from 'rxjs/operators';
 import {Image} from '../data/image';
+import {PageEvent} from '@angular/material';
 
 @Component({
   selector: 'app-wine-card',
@@ -13,39 +14,47 @@ import {Image} from '../data/image';
 export class WineCardComponent implements OnInit {
   wine: Wine;
   wineImage: Image;
+  length = 100;
+  pageSize = 1;
+  pageIndex = 0;
+  pageSizeOptions: number[] = [1];
 
   constructor(private wineService: WineService, private contextualService: ContextualService) {
-
   }
 
   ngOnInit() {
-    this.getWine();
+    this.getWine(this.pageIndex + 1);
   }
 
-  getWine(): void {
-    this.wineService.getWineNo404(1).pipe(
+  /*
+  * TODO: Use self links
+  * */
+  handlePage(event?: PageEvent) {
+    this.getWine(event.pageIndex + 1);
+  }
+
+  getWine(id: number): void {
+    console.log('Fetching ' + id);
+    this.wineService.getWineNo404(id).pipe(
       map(res => {
         console.log(res);
         return res;
       })
     ).subscribe(wine => {
       this.wine = wine;
-      if(wine.title){
+      if (wine.title) {
         this.getWineImage(wine.title);
       }
     });
   }
 
-  getWineImage(title: string){
+  getWineImage(title: string) {
     this.contextualService.getImage(title).pipe(
       map(res => {
-        console.log("Fetching image %o", res);
         return res;
       })
     ).subscribe(image => {
       this.wineImage = image;
-      // this.wineImage.Value
-      console.log("Fetched " + image.value);
     });
-}
+  }
 }
