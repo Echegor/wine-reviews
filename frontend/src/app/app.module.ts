@@ -11,6 +11,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppMaterialModule} from './app-material.module';
 import {HttpClientModule} from '@angular/common/http';
 import {WineService} from './wine/wine.service';
+import {ContextualService} from './webSearch/contextual.service';
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import {WineService} from './wine/wine.service';
     AppMaterialModule,
     HttpClientModule
   ],
-  providers: [WineService],
+  providers: [WineService,ContextualService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

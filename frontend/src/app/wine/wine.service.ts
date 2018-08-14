@@ -3,7 +3,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 import {Observable, of} from 'rxjs';
 import {catchError, tap} from 'rxjs/operators';
-import {Wine} from './wine';
+import {Wine} from '../data/wine';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -29,7 +29,6 @@ export class WineService {
   /** GET wine by id. Return `undefined` when id not found */
   getWineNo404<Data>(id: number): Observable<Wine> {
     const url = `${this.winesUrl}/${id}`;
-    console.log(url);
     return this.http.get<Wine>(url)
       .pipe(
         tap(w => {
