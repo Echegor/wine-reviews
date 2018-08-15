@@ -4,26 +4,35 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable, of} from 'rxjs';
 import {catchError, tap} from 'rxjs/operators';
 import {Wine} from '../data/wine';
+import {WinePage} from '../data/winePage';
 
 const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
 
 @Injectable({
   providedIn: 'root'
 })
 export class WineService {
-  private winesUrl = 'http://localhost:8080/wines';  // URL to web api
+  private winesUrl = 'http://localhost:8080/wine';  // URL to web api
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
   /** GET wines from the server */
-  getWines (): Observable<Wine[]> {
-    return this.http.get<Wine[]>(this.winesUrl)
+  getWines(): Observable<WinePage> {
+    return this.http.get<WinePage>(this.winesUrl)
       .pipe(
-        tap(winees => this.log('fetched wines')),
-        catchError(this.handleError('getWines', []))
+        tap(winee => this.log('fetched wines')),
+        catchError(this.handleError<WinePage>('getWines'))
       );
+  }
+
+  getNextPage(winePage: WinePage): Observable<WinePage> {
+    return this.http.get<WinePage>(winePage._links.next.href).pipe(
+      tap(winee => this.log('fetched wines')),
+      catchError(this.handleError<WinePage>('getNextPage'))
+    );
   }
 
   /** GET wine by id. Return `undefined` when id not found */
@@ -54,7 +63,7 @@ export class WineService {
   //////// Save methods //////////
 
   /** POST: add a new wine to the server */
-  addWine (wine: Wine): Observable<Wine> {
+  addWine(wine: Wine): Observable<Wine> {
     return this.http.post<Wine>(this.winesUrl, wine, httpOptions).pipe(
       tap((wine: Wine) => this.log(`added wine w/ id=${wine.id}`)),
       catchError(this.handleError<Wine>('addWine'))
@@ -62,7 +71,7 @@ export class WineService {
   }
 
   /** DELETE: delete the wine from the server */
-  deleteWine (wine: Wine | number): Observable<Wine> {
+  deleteWine(wine: Wine | number): Observable<Wine> {
     const id = typeof wine === 'number' ? wine : wine.id;
     const url = `${this.winesUrl}/${id}`;
 
@@ -73,7 +82,7 @@ export class WineService {
   }
 
   /** PUT: update the wine on the server */
-  updateWine (wine: Wine): Observable<any> {
+  updateWine(wine: Wine): Observable<any> {
     return this.http.put(this.winesUrl, wine, httpOptions).pipe(
       tap(_ => this.log(`updated wine id=${wine.id}`)),
       catchError(this.handleError<any>('updateWine'))
@@ -86,7 +95,7 @@ export class WineService {
    * @param operation - name of the operation that failed
    * @param result - optional value to return as the observable result
    */
-  private handleError<T> (operation = 'operation', result?: T) {
+  private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
 
       // TODO: send the error to remote logging infrastructure

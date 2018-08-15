@@ -8,13 +8,27 @@
   overflow: hidden;
   border-radius: 50%;
 }
-/*img {*/
-  /*width: 100%;*/
-  /*height: auto;*/
-  /*background: url('../../assets/wine-bottle_placeholder.svg') no-repeat;*/
-/*}*/
-/*.placeholder {*/
-  /*width: 100%;*/
-  /*height: auto;*/
-  /*background: url('../../assets/wine-bottle_placeholder.svg') no-repeat;*/
-/*}*/
+
+.author-info {
+  text-align: right;
+  margin: 5px;
+}
+
+#twitter-handle{
+  text-align: right;
+}
+#twitter-handle img {
+  height: 15px;
+  width: 15px;
+  text-decoration: none;
+}
+#twitter-handle a:link, a:visited {
+
+  color: #0084b4;
+  text-decoration: none;
+}
+
+#twitter-handle a:hover {
+  color: #00a3df;
+}
+
