@@ -1,6 +1,8 @@
 @import '../node_modules/@angular/material/theming';
 @import "./app/navbar/navbar-theme";
 @import "./app/home/homepage-theme";
+@import "./app/search-bar/searchbar-theme";
+@import "./app/page-title/pagetitle-theme";
 
 
 
@@ -35,6 +37,6 @@
   }
   @include nav-bar-theme($theme);
   @include home-page-theme($theme);
-
-
+  @include nav-bar-theme($theme);
+  @include search-bar-theme($theme);
 }

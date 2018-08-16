@@ -16,6 +16,7 @@ import {ImagePreloadDirectiveDirective} from './directive/image-preload-directiv
 import {ShopComponent} from './shop/shop.component';
 import {ContactComponent} from './contact/contact.component';
 import {SearchBarComponent} from './search-bar/search-bar.component';
+import {PageTitleComponent} from './page-title/page-title.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import {SearchBarComponent} from './search-bar/search-bar.component';
     ShopComponent,
     ContactComponent,
     SearchBarComponent,
+    PageTitleComponent,
   ],
   imports: [
     BrowserModule,
