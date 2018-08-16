@@ -1,21 +1,3 @@
-<!-- <mat-toolbar color="primary" class="app-navbar">
-  <mat-toolbar-row class="mat-elevation-z6">
-    <span>{{title}}</span>
-    <span class="toolbar-icon-spacer"></span>
-    <div mat-button="">
-      <span class="mat-button-wrapper">Components</span>
-      <div class="mat-button-ripple mat-ripple" matripple="">
-      </div>
-      <div class="mat-button-focus-overlay"></div>
-    </div>
-    <a mat-button="">
-      <span class="mat-button-wrapper">Components</span>
-      <div class="mat-button-ripple mat-ripple" matripple="">
-      </div>
-      <div class="mat-button-focus-overlay"></div>
-    </a>
-  </mat-toolbar-row>
-</mat-toolbar> -->
 <nav class="docs-navbar-header">
   <a mat-button class="docs-button" routerLink="/" aria-label="Angular Material">
     <img class="docs-angular-logo"
@@ -24,7 +6,17 @@
     <span>{{title}}</span>
   </a>
 
-  <div class="flex-spacer"></div>
-  <a mat-button class="docs-navbar-hide-small docs-button" routerLink="guides">Guides</a>
+  <a mat-button class="docs-navbar-hide-small docs-button" routerLink="shop">Shop</a>
+  <a mat-button class="docs-navbar-hide-small docs-button" routerLink="contact">Contact</a>
 
+  <div class="flex-spacer"></div>
+  <a mat-button class="docs-navbar-hide-small docs-button" routerLink="login">Login</a>
+
+  <nav class="docs-navbar docs-navbar-show-small">
+    <a mat-button class="docs-navbar-link" routerLink="guides">Login</a>
+  </nav>
+</nav>
+<nav class="docs-navbar docs-navbar-show-small">
+  <a mat-button class="docs-navbar-link" routerLink="shop">Shop</a>
+  <a mat-button class="docs-navbar-link" routerLink="contact">Contact</a>
 </nav>

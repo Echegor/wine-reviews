@@ -1,5 +1,6 @@
 @import '../node_modules/@angular/material/theming';
 @import "./app/navbar/navbar-theme";
+@import "./app/home/homepage-theme";
 
 
 
@@ -11,6 +12,10 @@
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
 
+  html, body{
+    margin: 0;
+  }
+
   .docs-app-background {
     background: mat-color($background, background);
   }
@@ -19,6 +24,7 @@
     background: mat-color($primary);
 
     h1 {
+      padding: 5px;
       color: mat-color($primary, default-contrast);
     }
   }
@@ -27,7 +33,8 @@
     background: mat-color($primary);
     color: mat-color($primary, default-contrast);
   }
-
-
   @include nav-bar-theme($theme);
+  @include home-page-theme($theme);
+
+
 }

@@ -13,6 +13,9 @@ import {HttpClientModule} from '@angular/common/http';
 import {WineService} from './wine/wine.service';
 import {ContextualService} from './webSearch/contextual.service';
 import {ImagePreloadDirectiveDirective} from './directive/image-preload-directive.directive';
+import {ShopComponent} from './shop/shop.component';
+import {ContactComponent} from './contact/contact.component';
+import {SearchBarComponent} from './search-bar/search-bar.component';
 
 
 @NgModule({
@@ -22,6 +25,9 @@ import {ImagePreloadDirectiveDirective} from './directive/image-preload-directiv
     HomeComponent,
     WineCardComponent,
     ImagePreloadDirectiveDirective,
+    ShopComponent,
+    ContactComponent,
+    SearchBarComponent,
   ],
   imports: [
     BrowserModule,

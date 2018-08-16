@@ -1,4 +1,4 @@
-material-docs-app {
+app-root {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -17,24 +17,25 @@ app-navbar {
   //color: $;
 }
 
-material-docs-app > app-component-sidenav {
+
+app-root > app-component-sidenav {
   flex: 1;
 }
 
-material-docs-app > app-homepage,
-material-docs-app > app-guides,
-material-docs-app > guide-viewer {
+app-root > app-home,
+app-root > app-shop,
+app-root > app-contact {
   overflow-y: auto;
 }
 
 @media (max-width: 720px) {
-  material-docs-app {
+  app-root {
     top: 92px;
   }
 
-  material-docs-app > app-homepage,
-  material-docs-app > app-guides,
-  material-docs-app > guide-viewer {
+  app-root > app-home,
+  app-root > app-shop,
+  app-root > app-contact {
     overflow-y: visible;
   }
 }
