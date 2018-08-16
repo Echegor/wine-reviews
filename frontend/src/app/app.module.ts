@@ -12,6 +12,7 @@ import {AppMaterialModule} from './app-material.module';
 import {HttpClientModule} from '@angular/common/http';
 import {WineService} from './wine/wine.service';
 import {ContextualService} from './webSearch/contextual.service';
+import {ImagePreloadDirectiveDirective} from './directive/image-preload-directive.directive';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import {ContextualService} from './webSearch/contextual.service';
     NavBarComponent,
     HomeComponent,
     WineCardComponent,
+    ImagePreloadDirectiveDirective,
   ],
   imports: [
     BrowserModule,

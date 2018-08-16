@@ -23,6 +23,7 @@ export class WineCardComponent implements OnInit {
     this.winePage = new WinePage();
   }
 
+  // https://github.com/rubenCodeforges/ng-gapi
   ngOnInit() {
     this.getWinePage();
   }

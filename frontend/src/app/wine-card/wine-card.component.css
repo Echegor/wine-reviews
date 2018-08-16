@@ -8,7 +8,9 @@
   overflow: hidden;
   border-radius: 50%;
 }
-
+#wine-image{
+  max-width: 400px;
+}
 .author-info {
   text-align: right;
   margin: 5px;
