@@ -6,9 +6,75 @@
 @include mat-core();
 
 
-// Define the light theme.
-$primary: mat-palette($mat-indigo);
-$accent:  mat-palette($mat-pink, A200, A100, A400);
+$mat-wine: (
+  50 : #eee6e7,
+  100 : #d5c1c3,
+  200 : #b9979b,
+  300 : #9c6d73,
+  400 : #874e55,
+  500 : #722f37,
+  600 : #6a2a31,
+  700 : #5f232a,
+  800 : #551d23,
+  900 : #421216,
+  A100 : #ff7e87,
+  A200 : #ff4b58,
+  A400 : #ff1828,
+  A700 : #fd0012,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+$mat-wood: (
+  50 : #fff4ea,
+  100 : #ffe4ca,
+  200 : #ffd2a7,
+  300 : #ffc084,
+  400 : #ffb369,
+  500 : #ffa54f,
+  600 : #ff9d48,
+  700 : #ff933f,
+  800 : #ff8a36,
+  900 : #ff7926,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #ffe3d4,
+  A700 : #ffd3ba,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+//$primary: mat-palette($mat-indigo);
+$primary: mat-palette($mat-wine);
+
+$accent:  mat-palette($mat-wood, A200, A100, A400);
 
 $theme: mat-light-theme($primary, $accent);
 @include angular-material-theme($theme);
