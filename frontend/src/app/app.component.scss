@@ -2,7 +2,7 @@ app-root {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 56px;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
@@ -14,13 +14,12 @@ app-navbar {
   left: 0;
   right: 0;
   z-index: 2;
-  //color: $;
 }
 
 
-app-root > app-component-sidenav {
-  flex: 1;
-}
+//app-root > app-component-sidenav {
+//  flex: 1;
+//}
 
 app-root > app-home,
 app-root > app-shop,
@@ -29,9 +28,6 @@ app-root > app-contact {
 }
 
 @media (max-width: 720px) {
-  app-root {
-    top: 92px;
-  }
 
   app-root > app-home,
   app-root > app-shop,
