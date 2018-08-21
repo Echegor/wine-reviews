@@ -1,22 +1,37 @@
 <nav class="navbar-header">
-  <a mat-button routerLink="/" aria-label="Angular Material">
-    <img class="docs-angular-logo"
-         src="../../assets/wine-bottle.svg"
-         alt="angular">
-    <a mat-button class="" routerLink="home">Home</a>
-  </a>
-
-  <a mat-button class="navbar-hide-small" routerLink="shop">Shop</a>
-  <a mat-button class="navbar-hide-small" routerLink="contact">Contact</a>
+  <img class="nav-icon"
+       src="../../assets/wine-bottle.svg"
+       alt="bottle">
+  <a mat-button routerLink="home">Home</a>
+  <div class="navbar-hide-small">
+    <i class="material-icons nav-icon">
+      shopping_basket
+    </i>
+    <a mat-button class="navbar-hide-small" routerLink="shop">Shop</a>
+  </div>
+  <div class="navbar-hide-small">
+    <i class="material-icons nav-icon">
+      contact_mail
+    </i>
+    <a mat-button class="navbar-hide-small" routerLink="contact">Contact</a>
+  </div>
 
   <div class="flex-spacer"></div>
-  <a mat-button class="navbar-hide-small" routerLink="login">Login</a>
 
-  <nav class="navbar navbar-show-small">
-    <a mat-button class="navbar-link" routerLink="guides">Login</a>
-  </nav>
+  <i class="material-icons">
+    person
+  </i>
+  <a mat-button routerLink="login">Login</a>
+
 </nav>
 <nav class="navbar navbar-show-small">
+  <i class="material-icons nav-icon">
+    shopping_basket
+  </i>
   <a mat-button class="navbar-link" routerLink="shop">Shop</a>
+  <div class="flex-spacer"></div>
+  <i class="material-icons nav-icon">
+    contact_mail
+  </i>
   <a mat-button class="navbar-link" routerLink="contact">Contact</a>
 </nav>

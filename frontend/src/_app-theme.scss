@@ -7,7 +7,7 @@
 
 
 // Styles for the docs app that are based on the current theme.
-@mixin material-docs-app-theme($theme) {
+@mixin wine-app-theme($theme) {
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
   $warn: map-get($theme, warn);
@@ -18,11 +18,11 @@
     margin: 0;
   }
 
-  .docs-app-background {
+  .wine-app-background {
     background: mat-color($background, background);
   }
 
-  .docs-primary-header {
+  .wine-primary-header {
     background: mat-color($primary);
 
     h1 {
@@ -31,7 +31,7 @@
     }
   }
 
-  .docs-footer {
+  .wine-footer {
     background: mat-color($primary);
     color: mat-color($primary, default-contrast);
   }
