@@ -1,0 +1,22 @@
+<mat-card>
+  <mat-card-title>Look for your favorite wine below:</mat-card-title>
+  <!--<mat-card-title>Wine Search</mat-card-title>-->
+  <mat-form-field class="search-form-field">
+    <input matInput #searchBox type="text" id="search-box" placeholder="Search wines." (keyup)="search(searchBox.value)">
+    <button mat-button *ngIf="searchBox.value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+
+
+  <!--<input #searchBox id="search-box" (keyup)="search(searchBox.value)"/>-->
+  <!--The $ is a convention that indicates heroes$ is an Observable, not an array.-->
+  <!--The AsyncPipe subscribes to an Observable automatically so you won't have to do so in the component class.-->
+  <ul class="search-result">
+    <li *ngFor="let wine of wines$ | async">
+      <a routerLink="/detail/{{wine.id}}">
+        {{wine.name}}
+      </a>
+    </li>
+  </ul>
+</mat-card>
