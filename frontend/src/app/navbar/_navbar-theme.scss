@@ -6,7 +6,7 @@
   $foreground: map-get($theme, foreground);
 
   app-navbar {
-    color: mat-color($primary);
+    color: mat-color($primary, default-contrast);
     background: mat-color($primary);
 
     .navbar, .navbar-header {
