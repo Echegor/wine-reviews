@@ -3,6 +3,7 @@ package com.archelo.wine.service;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 
@@ -13,11 +14,13 @@ public class ImageResizer {
     * returns the jpg after it caches a local copy.
     * */
     public static BufferedImage resizeImage(final String filename, int width, int height) throws IOException {
-        File imageFile = new File("/path/to/images");
+        File imageFile = new File("C:\\Users\\rtl1e\\IdeaProjects\\WineReviews\\backend\\images\\" + filename);
         Image image = ImageIO.read(imageFile);
         double aspectRatio = (double) image.getWidth(null)/(double) image.getHeight(null);
         BufferedImage tempJPG = resizeImage(image, 100,(int) (100/aspectRatio));
-        ImageIO.write(tempJPG, "png", new File("path/to/output"));
+        ImageIO.write(tempJPG, "jpg", new File("C:\\Users\\rtl1e\\IdeaProjects\\WineReviews\\backend\\images\\new." + filename));
+//        ByteArrayOutputStream image
+//        ImageIO.write(tempJPG,"png",new ByteArrayOutputStream());
         return tempJPG;
     }
 

@@ -2,7 +2,7 @@ package com.archelo.wine.storage;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties("storage")
+@ConfigurationProperties(prefix = "image")
 public class StorageProperties {
 
     /**
